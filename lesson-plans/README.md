@@ -9,7 +9,7 @@
 
 - [Functional Array Methods](./functional-array-methods?--defaults)
 - [Side-Effects](./side-effects?--defaults)
-  
+
 ## Week 3
 
 - [Group Project Intro](./group-project-intro?--defaults)

@@ -3,7 +3,11 @@
 console.log('-- begin --');
 
 /**
+ * Checks if the string contains specific letter or not.
  *
+ * @params {string} text - The left operand.
+ * @params {string} toCount - The right operand
+ * returns {number} Number how many specific letters contains in this string
  */
 const countCharacter = (text, toCount) => {
   if (toCount.length !== 1) {

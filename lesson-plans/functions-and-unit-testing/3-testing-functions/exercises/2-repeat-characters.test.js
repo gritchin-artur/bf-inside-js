@@ -7,7 +7,15 @@
  * @param {number} repeats - How many times to repeat each character.
  * @returns {string} The string with repeated characters.
  */
-const repeatCharacters = () => {};
+const repeatCharacters = (text, repeats) => {
+  let output = '';
+  for (let i = 0; i < text.length; i++) {
+    for (let a = 0; a < repeats; a++) {
+      output += text[i];
+    }
+  }
+  return output;
+};
 
 describe('repeatCharacters: repeats each character in a string', () => {
   it('repeats characters 0 times', () => {
