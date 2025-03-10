@@ -11,18 +11,19 @@
 */
 
 let userInput = '';
-let userConfirmed = false;
+let userConfirmed = true;
 while (userConfirmed) {
   userInput = prompt('enter your name:');
   console.log('userInput:', typeof userInput, userInput);
 
-  if (userInput === false) {
+  if (!userInput) {
     alert('nothing is not a name');
     continue;
   }
 
   const confirmMessage = 'is this correct?\n"' + userInput + '"';
   userConfirmed = alert(confirmMessage);
+  break;
 }
 
 const finalMessage = `your name is: "${userInput}"`;

@@ -8,13 +8,19 @@ while (true) {
   console.log('userInput:', typeof userInput, userInput);
 
   // make sure the user entered something
-  ___;
+  if (!userInput) {
+    alert('You must enter something');
+    continue;
+  }
 
   // make sure it is long enough to have an "e" in the 5th letter
-  ___;
+  if (userInput.length < 5) {
+    alert('Enter 5 letters minimum');
+    continue;
+  }
 
   // check if the 5th character is an "e" or "E"
-  if (_) {
+  if (userInput[4].toLowerCase() === 'e') {
     validInput = userInput;
     break;
   }

@@ -15,11 +15,11 @@ const value2 = 200;
 const value3 = false;
 let path = '';
 
-if (_) {
+if (typeof value1 === 'boolean') {
   path = 'if';
-} else if (_) {
+} else if (typeof value2 === 'boolean') {
   path = 'else if 1';
-} else if (_) {
+} else if (typeof value3 === 'boolean') {
   path = 'else if 2';
 } else {
   path = 'else';

@@ -12,7 +12,7 @@ let userString = '';
 let repetitions = NaN;
 
 let didConfirm = false;
-while (didConfirm) {
+while (!didConfirm) {
   /* gather a string from the user */
   userString = prompt('enter a phrase, each character will be repeated:');
   console.log('userString:', typeof userString, userString);
@@ -20,6 +20,7 @@ while (didConfirm) {
   /* make sure the user input something */
   if (userString === '' || userString === null) {
     alert('nope, enter something');
+    continue;
   } else {
     /* ask the user for a number */
     while (true) {
@@ -46,7 +47,7 @@ while (didConfirm) {
       if (Number.isNaN(repetitions)) {
         alert('"' + repetitionsInput + '" is not a number');
       } else {
-        continue;
+        break;
       }
     }
 
@@ -60,7 +61,7 @@ while (didConfirm) {
 let withRepeatedCharacters = '';
 
 /* iterate through each character in the user input */
-for (const character in userString) {
+for (const character of userString) {
   /* append each character multiple times to the new string */
   for (let i = 0; i < repetitions; i++) {
     withRepeatedCharacters += character;

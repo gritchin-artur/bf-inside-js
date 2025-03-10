@@ -11,20 +11,22 @@
 
 */
 
-const userNumber = NaN;
-while (Number.isNaN(userNumber)) {
-  const userInput = prompt('enter a number');
+let userNumber = '';
+while (!Number.isNaN(userNumber)) {
+  let userInput = prompt('enter a number');
 
-  if (userInput === '' && userInput === null) {
+  if (userInput === '' || userInput === null) {
     alert('enter something!');
-    break;
+    continue;
   }
 
-  userNumber = NaN(userInput);
+  userNumber = userInput;
 
   if (Number.isNaN(userNumber)) {
     alert('"', userInput, '" is not a number');
+    continue;
   }
+  break;
 }
 
 if (userNumber % 2 === 0) {
