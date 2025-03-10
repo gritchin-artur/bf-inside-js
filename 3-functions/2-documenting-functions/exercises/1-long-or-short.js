@@ -5,11 +5,11 @@
 console.log('-- begin --');
 
 /**
- * _
+ * This returns a string who checks if the number is grater then text length
  *
- * @_ {_} [_=_] - _
- * @_ {_} [_=_] - _
- * @_ {_} _
+ * @param {string} [text = ''] - some text
+ * @params {number} [cutoff = 0] - number to check
+ * @returns {string} - 'short' or 'long'
  */
 const longOrShort = (text = '', cutoff = 0) => {
   if (text.length < cutoff) {

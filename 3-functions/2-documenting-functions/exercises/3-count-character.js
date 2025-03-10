@@ -5,7 +5,11 @@
 console.log('-- begin --');
 
 /**
+ * This returns how many similar characters include first text
  *
+ * @params {string} [text = ''] - first text
+ * @params {string} [toCount = ''] - second text
+ * @returns {number} - number similar characters
  */
 const countCharacter = (text = '', toCount = '') => {
   if (toCount.length !== 1) {

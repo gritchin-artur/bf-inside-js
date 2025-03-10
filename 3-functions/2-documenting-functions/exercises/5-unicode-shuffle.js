@@ -5,7 +5,11 @@
 console.log('-- begin --');
 
 /**
+ * This returns a string of letters forward or backward
  *
+ * @params {string} [text = ''] - some text
+ * @params {number} [shift = 0] - number who push forward or backward
+ * @returns {string} - new string
  */
 const unicodeShuffle = (text = '', shift = 0) => {
   let encodedString = '';
