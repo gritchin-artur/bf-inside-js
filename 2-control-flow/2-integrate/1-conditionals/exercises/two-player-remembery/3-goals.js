@@ -31,6 +31,21 @@ alert(phrasesToRemember);
 
 /* -- BEGIN: gather player 2's guesses) -- */
 
+let score = 3;
+
+const guess1 = prompt('Player 1, enter your first guess:');
+if (guess1 !== phrase1) {
+  score = score - 1;
+}
+const guess2 = prompt('Player 1, enter your second guess:');
+if (guess2 !== phrase2) {
+  score = score - 1;
+}
+const guess3 = prompt('Player 1, enter your third guess:');
+if (guess3 !== phrase3) {
+  score = score - 1;
+}
+
 /* -- END: gather player 2's guesses -- */
 
-alert(`your score: ${points}`);
+alert(`your score: ${score}`);

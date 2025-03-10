@@ -7,6 +7,13 @@ while (true) {
   userInput = prompt('tell me something about frogs');
 
   /* -- BEGIN: validate input -- */
+  if (!userInput) {
+    continue;
+  }
+
+  if (userInput.includes('frog')) {
+    break;
+  }
 
   /* -- END: validate input -- */
 }

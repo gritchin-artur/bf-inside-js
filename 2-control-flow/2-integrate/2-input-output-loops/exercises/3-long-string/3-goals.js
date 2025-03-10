@@ -3,8 +3,9 @@
 'use strict';
 
 let userInput = '';
-while (userInput === '') {
+while (!userInput) {
   /* -- BEGIN: validate input -- */
+  userInput = prompt('enter anything longer than 5 characters');
   /* -- END: validate input -- */
 }
 
