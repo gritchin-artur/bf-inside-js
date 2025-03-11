@@ -9,22 +9,24 @@
  * @param {number} [y=0] - The right number.
  * @returns {number} The sum of x and y.
  */
-__;
+function adds(x = 0, y = 0) {
+  return x + y;
+}
 
-describe('', () => {
-  describe('', () => {
-    it('', () => {
-      const expected = _;
-      const actual = _;
-      expect(_).toEqual(_);
+describe('Adding numbers', () => {
+  describe('returns the added number', () => {
+    it('returns 14', () => {
+      const expected = 14;
+      const actual = adds(8, 6);
+      expect(actual).toEqual(expected);
     });
     // ...
   });
-  describe('', () => {
-    it('', () => {
-      const expected = _;
-      const actual = _;
-      expect(_).toEqual(_);
+  describe('returns the added number', () => {
+    it('returns 6', () => {
+      const expected = 6;
+      const actual = adds(2, 4);
+      expect(actual).toEqual(expected);
     });
     // ...
   });

@@ -11,17 +11,19 @@
  * @returns {string} The text with missing characters.
  */
 const skipCharacters = (text = '', toSkip = 1) => {
-  if (toSkip < 1) {
+  if (toSkip <= 1) {
     return text;
   }
 
   let skipified = '';
   let index = 0;
   for (const character of text) {
-    if (++index % toSkip === 0) {
+    if (index % toSkip !== 0) {
       skipified += character;
     }
+    index++;
   }
+
   return skipified;
 };
 
@@ -31,9 +33,9 @@ describe("skipCharacters: removes every x'th character from a string", () => {
       const returned = skipCharacters('abcdefghijkl', -14);
       expect(returned).toEqual('abcdefghijkl');
     });
-    it('skips everything', () => {
+    it('skips nothing when passing 1', () => {
       const returned = skipCharacters('abcdefghijkl', 1);
-      expect(returned).toEqual('');
+      expect(returned).toEqual('abcdefghijkl');
     });
     it('skips every other starting with the first', () => {
       const returned = skipCharacters('abcdefghijkl', 2);

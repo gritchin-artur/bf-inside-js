@@ -3,9 +3,20 @@
 'use strict';
 
 /**
+ * This returned reversed string
  *
+ * @params {string} [text=''] - input text
+ * @returned {string} reverse
  */
-__;
+
+function reverser(text = '') {
+  let output = '';
+
+  for (let i = text.length - 1; i >= 0; i--) {
+    output += text[i];
+  }
+  return output;
+}
 
 describe('reverser: reverses a string', () => {
   it('reverses one letter', () => {
