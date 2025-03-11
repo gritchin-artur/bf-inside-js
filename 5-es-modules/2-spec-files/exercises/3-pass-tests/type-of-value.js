@@ -5,4 +5,6 @@
  * @param {any} value - any javascript value
  * @returns {string} the value's type
  */
-__;
+export function typeOfValue(any) {
+  return typeof any;
+}

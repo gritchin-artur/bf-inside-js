@@ -2,4 +2,4 @@
 
 debugger;
 
-const sayHi = __;
+export const sayHi = (text = '') => `Hello, ${text}!`;
