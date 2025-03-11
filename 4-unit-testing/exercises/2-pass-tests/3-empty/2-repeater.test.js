@@ -3,12 +3,20 @@
 'use strict';
 
 /**
- * ___
- * @param {string} [text=''] - ___
- * @param {number} [repeats=_] - ___
- * @returns {string} ___
+ * This returned string how many times how bigest second value
+ *
+ * @param {string} [text=''] - string
+ * @param {number} [repeats=_] - number how many times repeated
+ * @returns {string} string
  */
-__;
+function repeat(text = '', repeats = 1) {
+  let output = '';
+
+  for (let i = 0; i < repeats; i++) {
+    output += text;
+  }
+  return output;
+}
 
 describe('repeater: repeats a string a specific number of times', () => {
   it('can repeat a string once', () => {
@@ -21,7 +29,7 @@ describe('repeater: repeats a string a specific number of times', () => {
   });
   it('repeating the empty string is still empty', () => {
     const actual = repeat('', 12);
-    expect(actual).toEqual('PpPpPpPp');
+    expect(actual).toEqual('');
   });
   it('repeating anything 0 times is the empty string', () => {
     const actual = repeat('hoy!', 0);
