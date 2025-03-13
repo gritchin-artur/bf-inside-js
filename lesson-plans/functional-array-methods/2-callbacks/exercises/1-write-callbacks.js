@@ -35,7 +35,7 @@ const check2 = checkIt('Racecar', isPalindrome);
 console.assert(check2 === 'no', 'Test 2');
 
 const check3 = checkIt('-+(*)+-', isPalindrome);
-console.assert(check3 === 'yes', 'Test 3');
+console.assert(check3 === 'no', 'Test 3');
 
 // --- declare and test second callback ---
 
@@ -47,11 +47,11 @@ console.assert(check3 === 'yes', 'Test 3');
  * @returns {boolean} Whether or not the string is JS.
  */
 const isJS = (txt = '') => {
-  return txt === 'JS';
+  return txt.toUpperCase() === 'JS';
 };
 
 const check4 = checkIt('JavaSCripT', isJS);
-console.assert(check4 === 'yes', 'Test 4');
+console.assert(check4 === 'no', 'Test 4');
 
 const check5 = checkIt('javaskript', isJS);
 console.assert(check5 === 'no', 'Test 5');
