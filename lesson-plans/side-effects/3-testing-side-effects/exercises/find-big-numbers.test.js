@@ -54,10 +54,12 @@ describe('findBigNumbers: finds all the big numbers in an array', () => {
   });
   describe('there are no side-effects', () => {
     it('returns a new array', () => {
-      writeThisTest;
+      const actual = findBigNumbers([1, 2, 3], 1);
+      expect(actual !== [1, 2, 3]).toEqual(true);
     });
     it('does not modify the original array', () => {
-      writeThisTest;
+      const actual = findBigNumbers([1, 2, 3], 1);
+      expect(actual).toEqual([1, 2, 3]);
     });
   });
 });
