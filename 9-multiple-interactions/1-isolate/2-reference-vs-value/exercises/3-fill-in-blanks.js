@@ -8,8 +8,14 @@ console.log('-- begin --');
 //  how many solutions can you find?
 // psst.  use JS Tutor & the debugger
 
-const object1 = _;
-const object2 = _;
+const object1 = {
+  corporation: 'VW',
+  brand: ['Audi', 'Bently', 'Lamborgini', 'Skoda', 'Seat', 'Volkswagen'],
+};
+const object2 = {
+  corporation: 'BMW',
+  brand: ['BMW', 'Rols Roys', 'mini', 'jaguar', 'Range Rover'],
+};
 
 const test1 = object1 !== object2;
 console.assert(test1, 'Test 1');

@@ -10,6 +10,9 @@ const bReference = b;
 let temp;
 
 // -- swap reference types (write this code) --
+temp = aReference;
+a = bReference;
+b = temp;
 
 // -- assert the reference types (this is correct) --
 console.assert(a === bReference, 'a references the object with strings');
