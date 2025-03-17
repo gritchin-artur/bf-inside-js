@@ -61,10 +61,13 @@ describe('addANumber: adds a given number to each number in an array', () => {
   });
   describe('there are no side-effects', () => {
     it('returns a new array', () => {
-      writeThisTest;
+      const actual = addANumber([1, 2, 3, 4], 1);
+      expect(actual !== [2, 3, 4, 5]).toEqual(true);
     });
     it('does not modify the original array', () => {
-      writeThisTest;
+      const actual = [1, 2, 3, 4];
+      addANumber(actual);
+      expect(actual).toEqual([1, 2, 3, 4]);
     });
   });
 });
